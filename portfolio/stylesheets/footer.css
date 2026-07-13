@@ -1,0 +1,54 @@
+    .colophon {
+        background: var(--ink);
+        color: var(--cream-text);
+        padding: 140px 0 50px;
+        text-align: center;
+    }
+
+    .colophon .eyebrow {
+        justify-content: center;
+    }
+
+    .colophon .section-title {
+        max-width: 16ch;
+        margin: 0 auto 44px;
+    }
+
+    .contact-links {
+        display: flex;
+        justify-content: center;
+        gap: 36px;
+        flex-wrap: wrap;
+        font-family: var(--f-mono);
+        font-size: .95rem;
+        margin-bottom: 90px;
+    }
+
+    .contact-links a {
+        border-bottom: 1px solid var(--dark-line);
+        padding-bottom: 4px;
+        transition: border-color .3s, color .3s;
+    }
+
+    .contact-links a:hover {
+        color: var(--amber);
+        border-color: var(--amber);
+    }
+
+    .fine-print {
+        font-family: var(--f-mono);
+        font-size: .72rem;
+        color: var(--steel-dim);
+        border-top: 1px solid var(--dark-line);
+        padding-top: 26px;
+        letter-spacing: .03em;
+    }
+
+    /* reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: .001ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: .001ms !important;
+        }
+    }
