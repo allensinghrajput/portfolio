@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhinav kumar — Security Analyst &amp; Web Developer | cybersecurity analyst</title>
+  <meta name="description" content="Portfolio of Abhinav kuamar, cybersecurity analyst and full-stack web developer.">
+
+  <!--
+======================================================================
+  HOW TO CUSTOMIZE THIS PAGE — read this first
+======================================================================
+  1. YOUR NAME:  find/replace "Alex Ryder" everywhere in this file.
+  2. YOUR PHOTO: search "REPLACE: hero portrait" — swap the img src
+     for your own photo (a tall portrait, ~900x1100px works best).
+  3. PROJECT IMAGES: search "REPLACE: project image" (4 of them) —
+     swap each src for a screenshot of your own work.
+  4. CERTIFICATE IMAGES: search "REPLACE: certificate image" (5 of
+     them) — swap each src for a scan/photo of your certificate.
+  5. All placeholder photos below come from https://picsum.photos
+     (a free placeholder-image service) purely so the page looks
+     complete out of the box. Every placeholder is tagged on-page
+     ("FIG.", "EXHIBIT", "SPECIMEN") so it's obvious what to swap.
+  6. TEXT: skills, project descriptions, certifications and contact
+     links are all placeholder copy — search "EDIT:" comments for
+     the main spots, or just read through and rewrite freely.
+  7. Everything (HTML/CSS/JS) lives in this one file for portability.
+======================================================================
+-->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230A0E14'/%3E%3Cpath d='M20 25 L50 80 L80 25' stroke='%23F5A623' stroke-width='9' fill='none' stroke-linecap='square'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="/stylesheets/certificate.css">
+  <link rel="stylesheet" href="/stylesheets/cursor.css">
+  <link rel="stylesheet" href="/stylesheets/file.css">
+  <link rel="stylesheet" href="/stylesheets/footer.css">
+  <link rel="stylesheet" href="/stylesheets/hero.css">
+  <link rel="stylesheet" href="/stylesheets/nav.css">
+  <link rel="stylesheet" href="/stylesheets/token.css">
+  <link rel="stylesheet" href="/stylesheets/toolkit.css">
+  <link rel="stylesheet" href="/stylesheets/utility.css">
+  <link rel="stylesheet" href="/stylesheets/skills-2.css">
+  <link rel="stylesheet" href="/stylesheets/tools-chip.css">
+  <link rel="stylesheet" href="/stylesheets/misc.css">
+  <link rel="stylesheet" href="/stylesheets/">
+</head>
+
+<body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ============ MASTHEAD ============ -->
+  <header class="masthead" id="masthead">
+    <div class="masthead-inner container">
+      <a href="#top" class="logo">[A]<span>BHINAV</span></a>
+      <nav class="nav" id="nav">
+        <a href="#toolkit" class="nav-link">Toolkit</a>
+        <a href="#casefiles" class="nav-link">Projects</a>
+        <a href="#verified" class="nav-link">Certificates</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero-bg" data-speed="0.12"></div>
+    <div class="hero-glow" data-speed="0.2"></div>
+    <div class="hero-tags" aria-hidden="true">
+      <span class="ht1" data-speed="0.25">CVE-2024-31337</span>
+      <span class="ht2" data-speed="0.15">PORT 443 // OPEN</span>
+      <span class="ht3" data-speed="0.3">TLS 1.3</span>
+      <span class="ht4" data-speed="0.18">OWASP TOP 10</span>
+      <span class="ht5" data-speed="0.22">git push origin main</span>
+    </div>
+
+    <div class="hero-inner container">
+      <div class="hero-text">
+        <p class="eyebrow reveal">Cover Story / Vol. 01 — No. 07</p>
+        <h1 class="hero-title reveal">Abhinav kumar</h1>
+        <p class="hero-lead reveal">i'm a full stack web developer and a VA-Pt analyst.</p>
+        <p class="hero-byline reveal">Words &amp; Code — <b>Abhinav kumar</b> · Final year, Galgotias University
+          Developer
+          · [
+          Delhi, India ]</p>
+        <div class="hero-cta reveal">
+          <a href="#casefiles" class="btn btn-primary">View Case Files</a>
+          <a href="#" class="btn btn-ghost">Download Dossier ↓</a>
+        </div>
+      </div>
+
+      <div class="hero-portrait" data-speed="0.06">
+        <div class="portrait-frame">
+          <!-- REPLACE: hero portrait — swap src for your own photo -->
+          <img class="portrait-img" src="/assets/my image.png" alt="Portrait of Alex Ryder">
+          <div class="scanline"></div>
+          <span class="frame-corner tl"></span>
+          <span class="frame-corner tr"></span>
+          <span class="frame-corner bl"></span>
+          <span class="frame-corner br"></span>
+          <span class="fig-tag">Fig. 01 — Subject</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>INITIATING SCAN...</span>
+        <span>0 CRITICAL VULNERABILITIES FOUND</span>
+        <span>BUILD PASSING</span>
+        <span>DEPLOYING TO PRODUCTION...</span>
+        <span>FIREWALL: ACTIVE</span>
+        <span>SSL CERTIFICATE: VALID</span>
+        <span>UPTIME: 99.98%</span>
+        <span>PEN TEST: COMPLETE</span>
+        <span>INITIATING SCAN...</span>
+        <span>0 CRITICAL VULNERABILITIES FOUND</span>
+        <span>BUILD PASSING</span>
+        <span>DEPLOYING TO PRODUCTION...</span>
+        <span>FIREWALL: ACTIVE</span>
+        <span>SSL CERTIFICATE: VALID</span>
+        <span>UPTIME: 99.98%</span>
+        <span>PEN TEST: COMPLETE</span>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="toolkit" id="toolkit">
+    <div class="container">
+      <p class="eyebrow reveal">Specifications / Sec. 02</p>
+      <div class="toolkit-intro">
+        <h2 class="section-title reveal" style="grid-column:1/-1;">The Toolkit</h2>
+
+        <p class="drop-cap reveal">From offensive security to full-stack development, these are the tools that power my
+          workflow during assessments, research, and software development.</p>
+      </div>
+
+      <div class="toolkit-grid">
+        <div class="skills-group sec-group reveal">
+          <h3 class="col-label">// Security</h3>
+          <ul class="index-list">
+            <li class="index-row reveal" data-tier="expert">
+              <span class="index-name">Vulnerability Assessment</span>
+              <span class="index-leader" aria-hidden="true"></span>
+              <span class="tier-stamp">Expert</span>
+            </li>
+            <li class="index-row reveal" data-tier="specialist">
+              <span class="index-name">Penetration Testing</span>
+              <span class="index-leader" aria-hidden="true"></span>
+              <span class="tier-stamp">Specialist</span>
+            </li>
+            <li class="index-row reveal" data-tier="specialist">
+              <span class="index-name">SIEM &amp; Log Analysis</span>
+              <span class="index-leader" aria-hidden="true"></span>
+              <span class="tier-stamp">Specialist</span>
+            </li>
+            <li class="index-row reveal" data-tier="expert">
+              <span class="index-name">Network Security</span>
+              <span class="index-leader" aria-hidden="true"></span>
+              <span class="tier-stamp">Expert</span>
+            </li>
+            <li class="index-row reveal" data-tier="proficient">
+              <span class="index-name">Incident Response</span>
+              <span class="index-leader" aria-hidden="true"></span>
+              <span class="tier-stamp">Proficient</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skills-group dev-group reveal">
+          <h3 class="col-label">// Development</h3>
+          <ul class="index-list">
+            <li class="index-row reveal" data-tier="expert">
+              <span class="index-name">JavaScript / TypeScript</span>
+              <span class="index-leader" aria-hidden="true"></span>
+              <span class="tier-stamp">Expert</span>
+            </li>
+            <li class="index-row reveal" data-tier="specialist">
+              <span class="index-name">React &amp; Node.js</span>
+              <span class="index-leader" aria-hidden="true"></span>
+              <span class="tier-stamp">Specialist</span>
+            </li>
+            <li class="index-row reveal" data-tier="specialist">
+              <span class="index-name">Python &amp; Automation</span>
+              <span class="index-leader" aria-hidden="true"></span>
+              <span class="tier-stamp">Specialist</span>
+            </li>
+            <li class="index-row reveal" data-tier="proficient">
+              <span class="index-name">REST &amp; GraphQL APIs</span>
+              <span class="index-leader" aria-hidden="true"></span>
+              <span class="tier-stamp">Proficient</span>
+            </li>
+            <li class="index-row reveal" data-tier="familiar">
+              <span class="index-name">CI/CD &amp; DevOps</span>
+              <span class="index-leader" aria-hidden="true"></span>
+              <span class="tier-stamp">Familiar</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chip-groups">
+        <div class="chip-group breakin reveal">
+          <h3 class="chip-title">The Break-In <span class="chip-sub">VAPT</span></h3>
+          <div class="tool-chips">
+            <span class="tag">Burp Suite</span>
+            <span class="tag">Metasploit</span>
+            <span class="tag">Nmap</span>
+            <span class="tag">Wireshark</span>
+            <span class="tag">OWASP ZAP</span>
+            <span class="tag">Nessus</span>
+            <span class="tag">Kali Linux</span>
+            <span class="tag">SQLmap</span>
+          </div>
+        </div>
+
+        <div class="chip-group buildout reveal">
+          <h3 class="chip-title">The Build-Out <span class="chip-sub">Full Stack &amp; Web Dev</span></h3>
+          <div class="tool-chips">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Node.js &amp; Express</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Git</span>
+            <span class="tag">Docker</span>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <section class="casefiles" id="casefiles">
+    <div class="container">
+      <p class="eyebrow reveal">Field Reports / Sec. 03</p>
+      <h2 class="section-title reveal">Projects</h2>
+
+      <div class="case-list">
+
+        <!-- Case 001 -->
+        <article class="case-card reveal">
+          <div class="case-media" data-speed="0.05">
+            <!-- REPLACE: project image 1 -->
+            <img src="/assets/projects/1.png" alt="project-1 screenshots">
+            <span class="exhibit-tag">Exhibit A</span>
+          </div>
+          <div class="case-body">
+            <span class="case-no">Project No. 001</span>
+            <h3 class="case-title">Web Vulnerability scanner</h3>
+            <span class="status-tag">Classified</span>
+            <!-- EDIT: project 1 description -->
+            <p class="redact-text"><span class="redact-bar"></span>A web vulnerability scanner that performs passive
+              security assessments of websites by checking for missing security headers, insecure cookies, SSL/TLS
+              issues, exposed files, directory listing, server fingerprinting, and basic XSS/SQL injection indicators.
+              Results are presented through a web-based dashboard..</p>
+            <div class="case-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">SQL i</span>
+              <span class="tag">XSS</span>
+            </div>
+            <a href="#" class="case-link">View full project →</a>
+          </div>
+        </article>
+
+        <!-- Case 002 -->
+        <article class="case-card reverse reveal">
+          <div class="case-media" data-speed="0.05">
+            <!-- REPLACE: project image 2 -->
+            <img src="/assets/projects/2.png" alt="Secure e-commerce platform screenshot">
+            <span class="exhibit-tag">Exhibit B</span>
+          </div>
+          <div class="case-body">
+            <span class="case-no">Case No. 002</span>
+            <h3 class="case-title">Lost n Found</h3>
+            <span class="status-tag">Classified</span>
+            <!-- EDIT: project 2 description -->
+            <p class="redact-text"><span class="redact-bar"></span>AI-powered lost & found platform, connects lost and
+              found item reports through intelligent matching.
+              Analyzes images, descriptions, locations, dates, and other details to identify potential matches.</p>
+            <div class="case-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDb</span>
+            </div>
+            <a href="#" class="case-link">Read Full Report →</a>
+          </div>
+        </article>
+
+        <!-- Case 003 -->
+        <article class="case-card reveal">
+          <div class="case-media" data-speed="0.05">
+            <!-- REPLACE: project image 3 -->
+            <img src="/assets/projects/3.png" alt="virtual mouse">
+            <span class="exhibit-tag">Exhibit C</span>
+          </div>
+          <div class="case-body">
+            <span class="case-no">Case No. 003</span>
+            <h3 class="case-title">Virtual mouse</h3>
+            <span class="status-tag">Classified</span>
+            <!-- EDIT: project 3 description -->
+            <p class="redact-text"><span class="redact-bar"></span>Developed an AI Virtual Mouse using Python, OpenCV
+              (cv2), and MediaPipe. Used real-time hand tracking and gesture recognition to control the cursor and
+              perform mouse actions without touching a mouse..</p>
+            <div class="case-tags">
+              <span class="tag">Python</span>
+              <span class="tag">CV2</span>
+              <span class="tag">MEDIAPIPE</span>
+            </div>
+            <a href="#" class="case-link">View Full Project →</a>
+          </div>
+        </article>
+
+        <!-- Case 004 -->
+        <article class="case-card reverse reveal">
+          <div class="case-media" data-speed="0.05">
+            <!-- REPLACE: project image 4 -->
+            <img src="/assets/projects/4.png" alt="Network traffic visualizer screenshot">
+            <span class="exhibit-tag">Exhibit D</span>
+          </div>
+          <div class="case-body">
+            <span class="case-no">Case No. 004</span>
+            <h3 class="case-title">Vs code website clone</h3>
+            <span class="status-tag">Classified</span>
+            <!-- EDIT: project 4 description -->
+            <p class="redact-text"><span class="redact-bar"></span>Built a responsive clone of the Visual Studio Code
+              website using HTML, CSS, and JavaScript. Replicated the layout, navigation, and responsive design while
+              improving frontend development skills..</p>
+            <div class="case-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Js</span>
+            </div>
+            <a href="#" class="case-link">Read Full Report →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VERIFIED / CERTIFICATIONS ============ -->
+  <section class="verified" id="verified">
+    <div class="container">
+      <p class="eyebrow reveal">Credentials / Sec. 04</p>
+      <h2 class="section-title reveal">Certificates</h2>
+
+      <div class="cert-grid">
+
+        <div class="cert-card reveal">
+          <div class="cert-thumb">
+            <!-- REPLACE: certificate image 1 -->
+            <img src="/assets/certificates/1.png" alt="Oracle database management">
+            <span class="specimen-tag">Specimen 01</span>
+          </div>
+          <div class="stamp">Verified ✓</div>
+          <h3 class="cert-name">Database management</h3>
+          <p class="cert-meta">Oracle — Issued 2025</p>
+          <p class="cert-id">ID: 24SCSE1040176</p>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-thumb">
+            <!-- REPLACE: certificate image 2 -->
+            <img src="/assets/certificates/4.png" alt="Certified Ethical Hacker certificate">
+            <span class="specimen-tag">Specimen 02</span>
+          </div>
+          <div class="stamp">Verified ✓</div>
+          <h3 class="cert-name">Web designing</h3>
+          <p class="cert-meta">Itronix Solutions — Issued 2024</p>
+          <p class="cert-id">ID: #65212</p>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-thumb">
+            <!-- REPLACE: certificate image 3 -->
+            <img src="/assets/certificates/6.png" alt="React certificate">
+            <span class="specimen-tag">Specimen 03</span>
+          </div>
+          <div class="stamp">Verified ✓</div>
+          <h3 class="cert-name">React.js</h3>
+          <p class="cert-meta">Hackerrank — Issued 2023</p>
+          <p class="cert-id">ID: CEEB99F65AE5</p>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-thumb">
+            <!-- REPLACE: certificate image 4 -->
+            <img src="/assets/certificates/8.png" alt="OSCP certificate">
+            <span class="specimen-tag">Specimen 04</span>
+          </div>
+          <div class="stamp">Verified ✓</div>
+          <h3 class="cert-name">Networking</h3>
+          <p class="cert-meta">Cisco — Issued 2025</p>
+          <p class="cert-id">ID: 6a25e9a7-7566-444b-b268-354e015d4c0b</p>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-thumb">
+            <!-- REPLACE: certificate image 5 -->
+            <img src="/assets/certificates/2.png" alt="nptel-ebuisness">
+            <span class="specimen-tag">Specimen 05</span>
+          </div>
+          <div class="stamp">Verified ✓</div>
+          <h3 class="cert-name">E-Buisness</h3>
+          <p class="cert-meta">NPTEL — Issued 2025</p>
+          <p class="cert-id">ID: NPTEL25MG134S1165403873</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER / CONTACT ============ -->
+  <footer class="colophon" id="contact">
+    <div class="container">
+      <p class="eyebrow reveal">End of Issue</p>
+      <h2 class="section-title reveal">Let's talk security &amp; software.</h2>
+      <div class="contact-links reveal">
+        <!-- EDIT: your real contact links -->
+        <a href="allensinghrajput651@gmail.com">allensinghrajput651@gmail.com</a>
+        <a href="https://github.com/allensinghrajput">github.com/allensingh651</a>
+        <a href="https://www.linkedin.com/in/abhinav-kumar-41517a334/">linkedin.com/allensingh651</a>
+      </div>
+      <p class="fine-print">Personal portfolio &amp; developer: Abhinav kumar. © 2026. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* ---------- mobile nav ---------- */
+      var navToggle = document.getElementById('navToggle');
+      var nav = document.getElementById('nav');
+      navToggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        navToggle.classList.toggle('open', open);
+        navToggle.setAttribute('aria-expanded', open);
+      });
+      nav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          nav.classList.remove('open');
+          navToggle.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', false);
+        });
+      });
+
+      /* ---------- masthead shrink on scroll ---------- */
+      var masthead = document.getElementById('masthead');
+      function updateMasthead() {
+        masthead.classList.toggle('scrolled', window.scrollY > 40);
+      }
+      document.addEventListener('scroll', updateMasthead, { passive: true });
+      updateMasthead();
+
+      /* ---------- parallax ---------- */
+      var parallaxEls = Array.prototype.slice.call(document.querySelectorAll('[data-speed]'));
+      function updateParallax() {
+        var y = window.scrollY;
+        parallaxEls.forEach(function (el) {
+          var speed = parseFloat(el.getAttribute('data-speed')) || 0;
+          el.style.transform = 'translate3d(0,' + (y * speed) + 'px,0)';
+        });
+      }
+      var ticking = false;
+      function onScroll() {
+        if (!ticking) {
+          window.requestAnimationFrame(function () {
+            updateParallax();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+      if (!reduceMotion) {
+        document.addEventListener('scroll', onScroll, { passive: true });
+        updateParallax();
+      }
+
+      /* ---------- scroll reveals ---------- */
+      var revealEls = document.querySelectorAll('.reveal');
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: .15, rootMargin: '0px 0px -60px 0px' });
+      revealEls.forEach(function (el) { revealObserver.observe(el); });
+
+      /* ---------- skill bar fill ---------- */
+      var skillFills = document.querySelectorAll('.skill-fill');
+      var skillObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var target = entry.target;
+            var pct = target.getAttribute('data-percent') || 0;
+            target.style.width = pct + '%';
+            skillObserver.unobserve(target);
+          }
+        });
+      }, { threshold: .4 });
+      skillFills.forEach(function (el) { skillObserver.observe(el); });
+
+      /* ---------- declassify case files ---------- */
+      var caseCards = document.querySelectorAll('.case-card');
+      var caseObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('declassified');
+            var statusTag = entry.target.querySelector('.status-tag');
+            if (statusTag) { statusTag.textContent = 'Declassified'; }
+            caseObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: .35 });
+      caseCards.forEach(function (el) { caseObserver.observe(el); });
+
+      /* ---------- cert stamps ---------- */
+      var certCards = document.querySelectorAll('.cert-card');
+      var certObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('stamped');
+            certObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: .4 });
+      certCards.forEach(function (el) { certObserver.observe(el); });
+
+      /* ---------- custom cursor ---------- */
+      var cursorDot = document.getElementById('cursorDot');
+      if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+        document.addEventListener('mousemove', function (e) {
+          cursorDot.style.left = e.clientX + 'px';
+          cursorDot.style.top = e.clientY + 'px';
+        });
+        var hoverTargets = document.querySelectorAll('a, button, .case-card, .cert-card');
+        hoverTargets.forEach(function (el) {
+          el.addEventListener('mouseenter', function () { cursorDot.classList.add('hovering'); });
+          el.addEventListener('mouseleave', function () { cursorDot.classList.remove('hovering'); });
+        });
+      }
+    })();
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+    @media (hover:hover) and (pointer:fine) {
+      body {
+        cursor: none;
+      }
+
+      .cursor-dot {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 26px;
+        height: 26px;
+        border: 1px solid var(--amber);
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 9999;
+        transition: width .25s var(--ease), height .25s var(--ease), opacity .3s;
+        mix-blend-mode: difference;
+      }
+
+      .cursor-dot::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 3px;
+        height: 3px;
+        background: var(--amber);
+        transform: translate(-50%, -50%);
+      }
+
+      .cursor-dot.hovering {
+        width: 52px;
+        height: 52px;
+      }
+    }
+
+    @media (hover:none),
+    (pointer:coarse) {
+      .cursor-dot {
+        display: none;
+      }
+    }

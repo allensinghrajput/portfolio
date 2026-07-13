@@ -1,0 +1,128 @@
+    .masthead {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 500;
+        padding: 22px 0;
+        transition: padding .4s var(--ease), background .4s var(--ease), border-color .4s var(--ease);
+        border-bottom: 1px solid transparent;
+    }
+
+    .masthead.scrolled {
+        padding: 14px 0;
+        background: rgba(10, 14, 20, .92);
+        backdrop-filter: blur(10px);
+        border-bottom-color: var(--dark-line);
+    }
+
+    .masthead-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-family: var(--f-mono);
+        font-weight: 700;
+        font-size: 1.05rem;
+        letter-spacing: .1em;
+        color: var(--cream-text);
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .logo span {
+        color: var(--amber);
+    }
+
+    .nav {
+        display: flex;
+        gap: 40px;
+    }
+
+    .nav-link {
+        font-family: var(--f-mono);
+        font-size: .78rem;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--steel);
+        position: relative;
+        padding: 4px 0;
+        transition: color .3s;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 0;
+        background: var(--amber);
+        transition: width .35s var(--ease);
+    }
+
+    .nav-link:hover {
+        color: var(--cream-text);
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    .nav-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+    }
+
+    .nav-toggle span {
+        width: 22px;
+        height: 2px;
+        background: var(--cream-text);
+        transition: transform .3s, opacity .3s;
+    }
+
+    .nav-toggle.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    @media (max-width: 860px) {
+        .nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: min(78vw, 320px);
+            background: var(--ink);
+            flex-direction: column;
+            justify-content: center;
+            gap: 34px;
+            padding: 40px;
+            transform: translateX(100%);
+            transition: transform .5s var(--ease);
+            border-left: 1px solid var(--dark-line);
+        }
+
+        .nav.open {
+            transform: translateX(0);
+        }
+
+        .nav-toggle {
+            display: flex;
+        }
+    }
