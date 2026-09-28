@@ -50,6 +50,7 @@
   <link rel="stylesheet" href="/stylesheets/skills-2.css">
   <link rel="stylesheet" href="/stylesheets/tools-chip.css">
   <link rel="stylesheet" href="/stylesheets/misc.css">
+  <link rel="stylesheet" href="/stylesheets/mobile.css">
 </head>
 
 <body>
@@ -88,7 +89,7 @@
       <div class="hero-text">
         <p class="eyebrow reveal">Cover Story / Vol. 01 — No. 07</p>
         <h1 class="hero-title reveal">Abhinav kumar</h1>
-        <p class="hero-lead reveal">A cybersecurity analyst focused on vulnerability assessment and penetration testing (VAPT) &mdash; can also builds the full-stack tools to back it up.</p>
+        <p class="hero-lead reveal">A cybersecurity enthusiast focused on vulnerability assessment and penetration testing (VAPT) &mdash; who also builds the full-stack tools to back it up.</p>
         <p class="hero-byline reveal">Words &amp; Code — <b>Abhinav Kumar</b> · Cybersecurity Enthusiast &amp; BCA Student, Galgotias University · Greater Noida, India</p>
         <div class="hero-cta reveal">
           <a href="#casefiles" class="btn btn-primary">View Case Files</a>
@@ -270,7 +271,7 @@
 
         <!-- Case 001 -->
         <article class="case-card reveal">
-          <div class="case-media" data-speed="0.05">
+          <div class="case-media">
             <!-- REPLACE: project image 1 -->
             <img src="/assets/projects/1.png" alt="project-1 screenshots">
             <span class="exhibit-tag">Exhibit A</span>
@@ -295,7 +296,7 @@
 
         <!-- Case 002 -->
         <article class="case-card reverse reveal">
-          <div class="case-media" data-speed="0.05">
+          <div class="case-media">
             <!-- REPLACE: project image 2 -->
             <img src="/assets/projects/2.png" alt="Secure e-commerce platform screenshot">
             <span class="exhibit-tag">Exhibit B</span>
@@ -319,7 +320,7 @@
 
         <!-- Case 003 -->
         <article class="case-card reveal">
-          <div class="case-media" data-speed="0.05">
+          <div class="case-media">
             <!-- REPLACE: project image 3 -->
             <img src="/assets/projects/3.png" alt="virtual mouse">
             <span class="exhibit-tag">Exhibit C</span>
@@ -480,9 +481,33 @@
           ticking = true;
         }
       }
+      /* project images: the frame + EXHIBIT tag stay locked to the text beside them;
+         only the picture drifts slightly inside its frame (0 offset when card is centred) */
+      var caseImgs = Array.prototype.slice.call(document.querySelectorAll('.case-media img'));
+      function updateCaseImages() {
+        var vh = window.innerHeight;
+        caseImgs.forEach(function (img) {
+          var r = img.parentElement.getBoundingClientRect();
+          var progress = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+          progress = Math.max(-1, Math.min(1, progress));
+          img.style.transform = 'translate3d(0,' + (progress * -0.055 * r.height) + 'px,0)'; /* travel is a % of the frame, so it can never run out of image */
+        });
+      }
+      function onScrollAll() {
+        if (!ticking) {
+          window.requestAnimationFrame(function () {
+            updateParallax();
+            updateCaseImages();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
       if (!reduceMotion) {
-        document.addEventListener('scroll', onScroll, { passive: true });
+        document.addEventListener('scroll', onScrollAll, { passive: true });
+        window.addEventListener('resize', updateCaseImages);
         updateParallax();
+        updateCaseImages();
       }
 
       /* ---------- scroll reveals ---------- */
